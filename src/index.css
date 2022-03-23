@@ -38,7 +38,7 @@ a {
 
 /* site container */
 .main-container {
-    width: 1920px;
+    width: min(90%, 1800px);
     margin: 0 auto;
 }
 
