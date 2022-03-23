@@ -9,6 +9,8 @@ import { BsReddit } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 import { HiArrowUp } from "react-icons/hi";
 import ImgSlider from "./components/slider/ImgSlider";
+import sharing from "./img/sharing.png";
+import banner from "./img/banner.png";
 
 function Home() {
     const backToTop = () => {
@@ -24,7 +26,9 @@ function Home() {
                             <img src={Logo} alt="logo" />
                         </div>
                         <div className="main-nav">
-                            <a href="#home">Home</a>
+                            <a href="#home" className="active">
+                                Home
+                            </a>
                             <a href="#nft">Nft Intro</a>
                             <a href="#about">About Us</a>
                         </div>
@@ -35,7 +39,7 @@ function Home() {
             <section className="main-banner" id="home">
                 <div className="banner-content">
                     <div className="banner-head">
-                        <h2>WEALTHY APES NFT COLLECTION APES</h2>
+                        <img src={banner} alt="banner text" />
                         <p>WEALTH SHARING NFT’s. THE NFT WITH UTILITY</p>
                     </div>
                     <div className="banner-wallet">
@@ -79,20 +83,20 @@ function Home() {
                 <div className="main-container">
                     <div className="nft-content">
                         <div className="nft-left">
-                            <h2>WEALTH SHARING NFT's</h2>
+                            <img src={sharing} alt="sharing" />
                             <p>
-                                <span>The NET With UtIlkly1</span> These NFT's
-                                wi0 ll come with utility based on radtks for0
-                                the Tier Levels to provide access to Wealth
-                                Protocols Ecosystem. All NFr's will include
-                                Wealth sharing regardless of the rarity. The
-                                first level will provide the investors with
-                                access to the base tier of Wealth Protocol's
-                                Ecosystem. The intermediate level will give
-                                access to the second tier. The third level will
-                                give access to the top tier. Rewards will be
-                                automatkally distributed to the NFr holders. No
-                                gas fee will be required from the Investor.{" "}
+                                <b>The NFT With Utilitiy!</b> These NFT's will
+                                come with utility based on rarities for the Tier
+                                Levels to provide access to Wealth Protocol’s
+                                Ecosystem. All NFT’s will include Wealth Sharing
+                                regardless of the rarity. The first level will
+                                provide the investors with access to the base
+                                tier of Wealth Protocol’s Ecosystem. The
+                                intermediate level will give access to the
+                                second tier. The third level will give access to
+                                the top tier. Rewards will be automatically
+                                distributed to the NFT holders. No gas fee will
+                                be required from the investor.
                             </p>
                         </div>
                         <img src={Nft01} alt="nft 1" />
@@ -201,12 +205,12 @@ function Home() {
                         </div>
                         <div className="footer-link">
                             <ul>
-                                <li>Copyright © 2022 Wealth Protocol</li>
                                 <li>
+                                    Copyright © 2022 Wealth Protocol{" "}
                                     <a href="#">wealthprotocol.io</a>
                                 </li>
-                                <li>Send us email</li>
                                 <li>
+                                    Send us email{" "}
                                     <a href="#">admin@wealthprotocol.io</a>
                                 </li>
                             </ul>

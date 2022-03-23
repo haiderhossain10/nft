@@ -78,6 +78,10 @@ a {
     text-transform: uppercase;
 }
 
+.main-nav a.active {
+    font-weight: 600;
+}
+
 /* banner section */
 .main-banner {
     height: 100vh;
@@ -121,11 +125,12 @@ a {
 
 .banner-head p {
     font-size: 2.5em;
-    background-color: #fff;
+    color: #fff;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #fff;
     -webkit-text-stroke-color: #0000fe;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.4px;
     font-family: 'MYRIADPRO-REGULAR';
     text-align: center;
 }
@@ -146,7 +151,7 @@ a {
 }
 
 .banner-wallet p {
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -203,6 +208,13 @@ a {
     width: 24vw;
 }
 
+.banner-head img {
+    width: 60vw;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    display: block;
+}
+
 /* nft section */
 .nft-content {
     display: flex;
@@ -256,6 +268,11 @@ a {
 
 .nft-section {
     padding: 10rem 0;
+}
+
+.nft-left img {
+    width: 100% !important;
+    padding-bottom: 1rem;
 }
 
 /* about section */
@@ -317,6 +334,7 @@ a {
 .banner-wallet h4 {
     color: #fff;
     padding: 8px 0;
+    font-weight: 400;
 }
 
 /* footer section */
@@ -366,8 +384,8 @@ a {
 .footer-link li {
     font-size: 28px;
     color: #fff;
-    border-right: 1px solid #fff;
-    padding: 0 1rem;
+    border-right: 3px solid #fff;
+    padding: 0 0.4rem;
 }
 
 .footer-link li:last-child {
@@ -719,7 +737,7 @@ a {
     }
 
     .banner-wallet p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .banner-wallet button {
@@ -776,5 +794,9 @@ a {
 
     .footer-head-box h4 {
         font-size: 40px;
+    }
+
+    .banner-bottom {
+        width: min(100%, 706px);
     }
 }
