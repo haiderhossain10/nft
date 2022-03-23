@@ -108,8 +108,8 @@ a {
     /* background: -webkit-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
     background: -moz-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
     background: linear-gradient(to right, #4337E6 30%, #F70FFF 100%); */
-    background: rgb(247,15,255);
-background: linear-gradient(320deg, rgba(247,15,255,1) 45%, rgba(18,214,223,1) 98%);
+    background: rgb(247, 15, 255);
+    background: linear-gradient(320deg, rgba(247, 15, 255, 1) 45%, rgba(18, 214, 223, 1) 98%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: #0000fe;
