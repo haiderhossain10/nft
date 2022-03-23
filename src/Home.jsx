@@ -36,7 +36,7 @@ function Home() {
                 <div className="banner-content">
                     <div className="banner-head">
                         <h2>WEALTHY APES NFT COLLECTION APES</h2>
-                        <p>WHELTH SHARING NFT's THE NFT WITH UTILITY</p>
+                        <p>WEALTH SHARING NFT’s. THE NFT WITH UTILITY</p>
                     </div>
                     <div className="banner-wallet">
                         <h2>0/5555</h2>
@@ -51,10 +51,10 @@ function Home() {
                         <h4>**Place social media icons here**</h4>
                         <p>
                             <span>
-                                WEALTH SHARING NFT's - 5% ROYALTY FEE THAT
+                                WEALTH SHARING NFT’s - 5% ROYALTY FEE THAT
                                 REWARDS THE NFT HOLDERS
                             </span>
-                            please make sure you are connected to the right
+                            Please make sure you are connected to the right
                             network (Binance Smart Chain Mainnet) and the
                             correct address. Please note: Once you make the
                             purchase, you cannot Undo this action.

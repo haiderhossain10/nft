@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: 'arpona-regular';
-    src: url('./font/arpona-regular.woff');
+    font-family: 'Arpona-Regular';
+    src: url('./font/Arpona-Regular.woff');
 }
 
 * {
@@ -22,7 +22,7 @@
 
 body {
     background-color: #000000;
-    /* font-family: 'arpona-regular'; */
+    font-family: 'Arpona-Regular';
 }
 
 html,
@@ -103,11 +103,13 @@ a {
 }
 
 .banner-head h2 {
-    font-size: 79px;
+    font-size: 60px;
     background: #4337E6;
-    background: -webkit-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
+    /* background: -webkit-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
     background: -moz-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
-    background: linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
+    background: linear-gradient(to right, #4337E6 30%, #F70FFF 100%); */
+    background: rgb(247,15,255);
+background: linear-gradient(320deg, rgba(247,15,255,1) 45%, rgba(18,214,223,1) 98%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: #0000fe;
@@ -170,7 +172,7 @@ a {
     width: min(100%, 896px);
     margin: 0 auto;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     transition: all .3s;
 }
 
@@ -709,7 +711,7 @@ a {
     }
 
     .banner-wallet h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .banner-wallet {
@@ -721,7 +723,7 @@ a {
     }
 
     .banner-wallet button {
-        height: 41px;
+        height: 34px;
         font-size: 16px;
     }
 
@@ -735,5 +737,44 @@ a {
 
     .banner-bottom p {
         font-size: 12px;
+    }
+
+    .nft-left h2 {
+        font-size: 50px;
+    }
+
+    .nft-left p {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .about-content img {
+        width: 30vw;
+    }
+
+    .nft-content img {
+        width: 20vw;
+    }
+
+    .nft-left button {
+        font-size: 50px;
+        font-size: 16px;
+    }
+
+    .about-left p {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .about-left h2 {
+        font-size: 50px;
+    }
+
+    .footer-link li {
+        font-size: 16px;
+    }
+
+    .footer-head-box h4 {
+        font-size: 40px;
     }
 }
