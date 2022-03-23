@@ -1,13 +1,739 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* font family */
+@font-face {
+    font-family: 'MYRIADPRO-REGULAR';
+    src: url('./font/MYRIADPRO-REGULAR.woff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'arpona-regular';
+    src: url('./font/arpona-regular.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    /* font-family: 'arpona-regular'; */
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* site container */
+.main-container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 1919px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* header section */
+.main-header-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 85px;
+}
+
+.main-nav a {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* banner section */
+.main-banner {
+    height: 100vh;
+    width: 100%;
+    background-image: url('./img/banner-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.banner-head {
+    padding-bottom: 2rem;
+}
+
+.banner-head h2 {
+    font-size: 79px;
+    background: #4337E6;
+    background: -webkit-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
+    background: -moz-linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
+    background: linear-gradient(to right, #4337E6 30%, #F70FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #0000fe;
+    -webkit-text-stroke-width: 0.1px;
+    text-align: center;
+    font-family: 'MYRIADPRO-REGULAR';
+    padding-bottom: 2rem;
+}
+
+.banner-head p {
+    font-size: 2.5em;
+    background-color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #0000fe;
+    -webkit-text-stroke-width: 1px;
+    font-family: 'MYRIADPRO-REGULAR';
+    text-align: center;
+}
+
+.banner-wallet {
+    width: min(100%, 896px);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    margin: 0 auto;
+    padding: 18px;
+    text-align: center;
+    box-shadow: inset 0px 0px 23px #4545ff, 0px 0px 23px #4545ff;
+}
+
+.banner-wallet h2 {
+    font-size: 95px;
+    color: #fff;
+}
+
+.banner-wallet p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.banner-wallet button {
+    height: 55px;
+    background-color: #fff;
+    font-size: 22px;
+    color: #000;
+    padding: 0 2rem;
+    border-radius: 50px;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all .3s;
+    border: none;
+}
+
+.banner-wallet button:hover {
+    background-color: #2f2aee;
+    color: #fff;
+}
+
+.banner-bottom {
+    width: min(100%, 896px);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+    transition: all .3s;
+}
+
+
+
+.banner-bottom h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.banner-bottom p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.banner-img-left {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 20vw;
+}
+
+.banner-img-right {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 24vw;
+}
+
+/* nft section */
+.nft-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nft-left {
+    flex-basis: 60%;
+}
+
+.nft-left h2 {
+    font-size: 90px;
+    color: #1b09c8;
+    -webkit-text-stroke-color: #2f2aee;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 0 0 6px #fff;
+    padding-bottom: 3rem;
+}
+
+.nft-left p {
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    line-height: 34px;
+    font-size: 400;
+}
+
+.nft-left p span {
+    font-weight: 800;
+}
+
+.nft-left button {
+    height: 61px;
+    padding: 0 2rem;
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 26px;
+    display: block;
+    margin: 4rem auto 0 auto;
+    border: none;
+    transition: all .3s;
+
+}
+
+.nft-left button:hover {
+    background-color: #2f2aee;
+    color: #fff;
+}
+
+.nft-section {
+    padding: 10rem 0;
+}
+
+/* about section */
+.about-box {
+    background-image: url('./img/banner-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-left {
+    flex-basis: 60%;
+}
+
+.about-left h2 {
+    font-size: 70px;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.about-left p {
+    font-size: 28px;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.about-left p:last-of-type {
+    padding-bottom: 0;
+}
+
+.footer-head-box {
+    background-color: #fff;
+    padding: 1rem 0;
+}
+
+.footer-head-box h4 {
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 400;
+}
+
+.footer-head-box h4 span {
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.banner-wallet h4 {
+    color: #fff;
+    padding: 8px 0;
+}
+
+/* footer section */
+
+.footer-box {
+    background-color: #10122d;
+    padding: 48px 0 92px 0;
+    position: relative;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+
+.footer-social a {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    color: #3c3c3c;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+.footer-social a:hover {
+    background-color: #2f2aee;
+    color: #fff;
+}
+
+.footer-link {
+    margin-top: 3rem;
+}
+
+.footer-link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer-link li {
+    font-size: 28px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding: 0 1rem;
+}
+
+.footer-link li:last-child {
+    border-right: none;
+}
+
+.footer-link li a {
+    color: #0000fe;
+}
+
+.back-top {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.back-top a {
+    font-size: 20px;
+    background-color: #1b09c8;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.slider-box img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.slider-box .slick-track {
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-box .slick-dots li {
+    background-color: #2f2aee;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.slider-box .slick-dots li.slick-active {
+    width: 24px;
+    border-radius: 30px;
+}
+
+.slider-box .slick-dots li button {
+    width: auto;
+}
+
+.slider-box .slick-dots li button::before {
+    display: none;
+}
+
+.slider-box {
+    margin-top: 100px;
+}
+
+/* responsive design */
+
+@media all and (max-width: 450px) {
+    .main-logo img {
+        width: 90px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .main-banner {
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .banner-head h2 {
+        font-size: 30px;
+    }
+
+    .banner-head p {
+        font-size: 12px;
+    }
+
+    .banner-wallet h2 {
+        font-size: 24px;
+    }
+
+    .banner-content {
+        width: 90%;
+    }
+
+    .banner-wallet button {
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .banner-wallet p,
+    .banner-bottom p,
+    .banner-bottom h4 {
+        font-size: 12px;
+    }
+
+    .banner-img-right,
+    .banner-img-left {
+        display: none;
+    }
+
+    .nft-left {
+        flex-basis: 100%;
+    }
+
+    .nft-left h2 {
+        font-size: 40px;
+    }
+
+    .nft-content {
+        flex-wrap: wrap;
+    }
+
+    .nft-content img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .nft-left p {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .nft-left {
+        margin-top: 3rem;
+    }
+
+    .nft-content img {
+        order: 2;
+    }
+
+    .nft-left button {
+        height: 35px;
+        font-size: 14px;
+        margin-top: 2rem;
+    }
+
+    .about-content {
+        flex-wrap: wrap;
+    }
+
+    .about-left {
+        flex-basis: 100%;
+    }
+
+    .about-left h2 {
+        font-size: 34px;
+    }
+
+    .about-text p,
+    .about-left p {
+        font-size: 12px;
+    }
+
+    .about-content img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .footer-head-box h4 {
+        font-size: 24px;
+    }
+
+    .footer-social a {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+
+    .footer-link ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .footer-link ul li {
+        font-size: 12px;
+        border-right: none;
+        padding: 0.4rem 0;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 850px) {
+    .main-logo img {
+        width: 90px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .main-banner {
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .banner-head h2 {
+        font-size: 30px;
+    }
+
+    .banner-head p {
+        font-size: 12px;
+    }
+
+    .banner-wallet h2 {
+        font-size: 24px;
+    }
+
+    .banner-content {
+        width: 90%;
+    }
+
+    .banner-wallet button {
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .banner-wallet p,
+    .banner-bottom p,
+    .banner-bottom h4 {
+        font-size: 12px;
+    }
+
+    .banner-img-right,
+    .banner-img-left {
+        display: none;
+    }
+
+    .nft-left {
+        flex-basis: 100%;
+    }
+
+    .nft-left h2 {
+        font-size: 40px;
+    }
+
+    .nft-content {
+        flex-wrap: wrap;
+    }
+
+    .nft-content img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .nft-left p {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .nft-left {
+        margin-top: 3rem;
+    }
+
+    .nft-content img {
+        order: 2;
+    }
+
+    .nft-left button {
+        height: 35px;
+        font-size: 14px;
+        margin-top: 2rem;
+    }
+
+    .about-content {
+        flex-wrap: wrap;
+    }
+
+    .about-left {
+        flex-basis: 100%;
+    }
+
+    .about-left h2 {
+        font-size: 34px;
+    }
+
+    .about-text p,
+    .about-left p {
+        font-size: 12px;
+    }
+
+    .about-content img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .footer-head-box h4 {
+        font-size: 24px;
+    }
+
+    .footer-social a {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+
+    .footer-link ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .footer-link ul li {
+        font-size: 12px;
+        border-right: none;
+        padding: 0.4rem 0;
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1850px) {
+    .main-logo img {
+        width: 180px;
+    }
+
+    .main-nav {
+        gap: 2rem;
+    }
+
+    .main-nav a {
+        font-size: 18px;
+    }
+
+    .banner-img-left {
+        width: 20%;
+    }
+
+    .banner-wallet h2 {
+        font-size: 40px;
+    }
+
+    .banner-wallet {
+        width: min(100%, 740px);
+    }
+
+    .banner-wallet p {
+        font-size: 16px;
+    }
+
+    .banner-wallet button {
+        height: 41px;
+        font-size: 16px;
+    }
+
+    .banner-head h2 {
+        font-size: 40px;
+    }
+
+    .banner-head p {
+        font-size: 1rem;
+    }
+
+    .banner-bottom p {
+        font-size: 12px;
+    }
 }
