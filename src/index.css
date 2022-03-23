@@ -314,14 +314,15 @@ a {
 }
 
 .footer-head-box h4 {
-    font-size: 50px;
+    font-size: 40px;
     color: #000;
     text-align: center;
     font-weight: 400;
 }
 
-.footer-head-box h4 span {
-    font-weight: 700;
+.footer-head-box h4 h2 {
+    font-size: 40px;
+    display: inline-block;
 }
 
 .about-text p {

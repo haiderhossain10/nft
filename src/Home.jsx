@@ -179,8 +179,8 @@ function Home() {
                 <div className="main-container">
                     <div className="footer-head">
                         <h4>
-                            ETH NFT's coming soon! brought to you{" "}
-                            <span>by WEALTH PROTOCOL</span>
+                            ETH NFT's coming soon! brought to you by{" "}
+                            <h2>WEALTH PROTOCOL</h2>
                         </h4>
                     </div>
                 </div>
